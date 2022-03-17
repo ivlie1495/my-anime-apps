@@ -3,13 +3,6 @@ import { gql } from "@apollo/client";
 export const ANIME_LIST = gql`
   query ($id: Int, $page: Int, $perPage: Int, $search: String, $sort: [MediaSort]) {
     Page(page: $page, perPage: $perPage) {
-      pageInfo {
-        total 
-        currentPage
-        lastPage
-        hasNextPage
-        perPage
-      }
       media(id: $id, search: $search, sort: $sort) {
         id
         title {
@@ -19,9 +12,6 @@ export const ANIME_LIST = gql`
         coverImage {
           large
         }
-        genres
-        duration
-        favourites
       }
     }
   }

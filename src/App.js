@@ -8,13 +8,13 @@ const App = () => {
   const [ searchTerm, setSearchTerm ] = useState(null);
 
   return (
-    <div className="flex justify-center items-center flex-col">
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
         <Route path="/detail/:id" element={<Detail />} />
       </Routes>
-    </div>
+    </>
     
   );
 }

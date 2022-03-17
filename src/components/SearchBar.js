@@ -17,13 +17,13 @@ const SearchBar = ({ searchTerm, handleSearchBarChange }) => {
         </svg>
       </span>
       <input
-          type="text"
-          placeholder="Search for Animes"
-          className="px-3 py-3 placeholder-gray-800 text-gray-800 relative bg-gray-100 rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full pl-10"
-          aria-label="Search for Animes"
-          value={searchTerm ?? ''}
-          onChange={({ target: { value }}) => handleSearchBarChange(value)}
-        />
+        type="text"
+        placeholder="Search for Animes"
+        className="px-3 py-3 placeholder-gray-800 text-gray-800 relative bg-gray-100 rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full pl-10"
+        aria-label="Search for Animes"
+        value={searchTerm ?? ''}
+        onChange={({ target: { value }}) => handleSearchBarChange(value)}
+      />
     </div>
   );
 }
